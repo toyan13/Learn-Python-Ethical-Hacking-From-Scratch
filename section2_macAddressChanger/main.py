@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# python3 main.py -i <interface name> -m <new MAC address>
+
 import subprocess
 import optparse
 
