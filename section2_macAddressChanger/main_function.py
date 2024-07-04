@@ -23,8 +23,10 @@ def change_mac(interface, new_mac):
     subprocess.call(["ifconfig", interface, "up"])
 
 options = get_arguments()
-change_mac(options.interface, options.new_mac)
+# change_mac(options.interface, options.new_mac)
 
+ifconfig_result = subprocess.check_output(["ifconfig", options.interface]).decode("utf-8")
+print(ifconfig_result)
 
 
 
