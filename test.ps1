@@ -1,1 +1,1 @@
-Get-ExecutionPolicy
+$policy = Get-ExecutionPolicy
